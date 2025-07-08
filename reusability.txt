@@ -1,0 +1,11 @@
+(1) If we have:
+    <Button>This is a button</Button>
+    Now to access this text in Button component you need to write: props.children
+
+    eg: function Button(props){
+        return(
+            <button>{props.children}</button>
+        )
+    }
+
+(2) For icons go to this site : https://react-icons.github.io/react-icons
