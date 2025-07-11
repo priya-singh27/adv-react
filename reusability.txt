@@ -78,3 +78,14 @@ Menu({children}){
 }
 
 🗒️: React.cloneElement(element, props, ...children) : Create a  react element based on the element, but with different props and children
+
+(7) Why React.Children is not reliable option for passing props down in the tree?
+
+Becuase with React.Children you can pass the props to the immediate child only; so it is fragile because if a component is just wrapped in a  
+div for styling purpose now that componnent is no longer receiving any props.
+
+(7) Context and State?
+
+Context: Context have the job of passing values down to the children or grand-children in the tree
+
+State: State is charge of updating the value and triggering re-renders inside of react
