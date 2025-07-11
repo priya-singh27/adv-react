@@ -89,3 +89,31 @@ div for styling purpose now that componnent is no longer receiving any props.
 Context: Context have the job of passing values down to the children or grand-children in the tree
 
 State: State is charge of updating the value and triggering re-renders inside of react
+
+(8) Compound component with dot syntax?
+./Menu
+  ↪️ Menu.js
+  ↪️ MenuButton.js
+  ↪️ MenuDropdown.js
+  ↪️ index.js
+      ```  
+        import Menu from './Menu'
+        import MenuButton from './Menu'
+        import MenuDropdown from './Menu'
+
+        Menu.Button = MenuButton
+        Menu.MenuDropdown = MenuDropdown
+
+        export default Menu
+        
+      ```
+    
+  Now you don't need to import MenuDropdown or MenuButton, you can write
+  import Menu
+
+  <Menu>
+    <Menu.Button></Menu.Button>
+    <Menu.Dropdown></Menu.Dropdown>
+  </Menu> 
+
+
