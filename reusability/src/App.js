@@ -1,9 +1,12 @@
 import './App.css';
-import  Count from './useref'
+// import  Count from './useref'
+import Button from './Badges/Button';
 
 function App() {
   return (
-    <Count/>
+    <>
+     <Button color={"green"} shape={"rounded"}/>
+    </>
   );
 }
 

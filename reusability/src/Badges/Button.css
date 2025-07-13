@@ -1,0 +1,40 @@
+.square{
+    display: block;
+    width: 67px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 2px 12px;
+    margin: 0 auto;
+}
+
+.rounded{
+    width: 67px;
+    height: 24px;
+    border-radius: 12px;
+    padding: 2px 12px;
+    margin: 0 auto;
+}
+
+.white{
+    background-color: #F3F4F6;
+    color: #1F2937;
+}
+
+.red{
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+
+.yellow{
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.green{
+    background-color: #D1FAE5;
+    color: #065F46;
+}
+
+/* .container{
+    display: ;
+} */
