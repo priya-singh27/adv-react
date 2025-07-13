@@ -116,5 +116,14 @@ State: State is charge of updating the value and triggering re-renders inside of
     <Menu.Dropdown></Menu.Dropdown>
   </Menu> 
   
+(9) Some points about useState?
 
+-> when you update value by set function the value is updated in the next render
+-> if the new value is same as previous one react might skip re-rendering to optimize performance
+-> updated values are displayed when all the events handlers have been executed and have been executed their set functions.
+Like in current state suppose a state variable changed and it trgigered a re-render then it will not casue re-render immediately 
+it will let all the event handlers run their set function and then trigger re-render
 
+(10) useRefs?
+
+Refs are like state, except changing them doesn't cause a re-render.
