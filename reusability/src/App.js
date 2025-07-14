@@ -3,6 +3,7 @@ import './App.css';
 import Button from './Badges/Button';
 import { CheckCircle, AlertTriangle, XCircle, Info } from "lucide-react";
 import SingleLineBanners from './Banners/Banners'
+import Cards from './cards/cards';
 
 
 function App() {
@@ -10,10 +11,12 @@ function App() {
     <>
       {/* <Button color={"green"} shape={"rounded"} /> */}
 
-      <SingleLineBanners
+      {/* <SingleLineBanners
         message="Congratulations! Congratulations Congratulations Congratulations Congratulations! Congratulations Congratulations Congratulations Congratulations! Congratulations Congratulations Congratulations"
         icon={<CheckCircle></CheckCircle>}
-      ></SingleLineBanners>
+      ></SingleLineBanners> */}
+
+      <Cards></Cards>
     </>
   );
 }
