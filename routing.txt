@@ -1,0 +1,39 @@
+(Q) How can we use 'react-router-dom' for routing purpose?
+
+<BrowserRouter> (The Manager) ➡️
+
+    Creates and manages the history object 
+
+    Provides routing context (like location, navigate) to all child components via React Context.
+
+    Listens to URL changes (e.g., back/forward button clicks) and updates the location.
+
+<Routes> (The Matcher) ➡️
+
+    Watches the location.pathname (from context).
+
+    Iterates through its child <Route> components to find the first matching path.
+
+(2)What is a location object?
+location object provides information about URL and also provides some APIs to manipulate it.
+
+➡️ location.state: Used to pass info across pages
+➡️ location.hash: used to navigate user on the current page
+➡️ location.search: used to get query parameters eg: ?name=Priya&age=22
+
+➡️ If you just add up the three you'll get the URL the user sees in the browser:
+location.pathname + location.search + location.hash; Eg: /bbq/pig-pickins?campaign=instagram#menu
+
+(3) How do you make sure header and footer stays consistently on each page?
+
+We can use <Outlet/> that renders element if it matches path of the location..
+Eg:
+import {Outlet} from 'react-router-dom'
+export default function Header(){
+    return (
+        <>
+            <h1>This is header page</h1>
+            <Outlet/>
+        </>
+    )
+}
