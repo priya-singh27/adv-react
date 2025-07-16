@@ -1,4 +1,4 @@
-(1) If we have:
+❓ If we have:
     <Button>This is a button</Button>
     Now to access this text in Button component you need to write: props.children
 
@@ -8,15 +8,15 @@
         )
     }
 
-(2) For icons go to this site : https://react-icons.github.io/react-icons
+❓ For icons go to this site : https://react-icons.github.io/react-icons
 
-(3) Prop Drilling : Passing props down to the child components through multiple levels of component tree, even though many intermediate components in between are not at all using these props
+❓ Prop Drilling : Passing props down to the child components through multiple levels of component tree, even though many intermediate components in between are not at all using these props
 
-(4) What is Compound components?
+❓ What is Compound components?
 Components that work together to accomplish a greater objective than using a single component alone. 
 Some examples of html elements that work together to add functionality or styling are: <ul> & <li>, <select> & <option>, <table> & all the other table elements
 
-(5) How can compound components help you avoid having to drill props multiple levels down?
+❓ How can compound components help you avoid having to drill props multiple levels down?
 
 Compound component "flatten" the heirarchy that I would otherwise need to pass props through.
 Since I need to provide the children to render, the parent-most component has direct access 
@@ -43,7 +43,7 @@ sport as children to this component. Now in MenuItem I am taking this children a
 rendering it. another change is now MenuDropdown is not receiving items array it 
 is receiving all MenuItem as children and I render children inside MenuDropdown.
 
-(6) What problem does React.Children solve?
+❓ What problem does React.Children solve?
 
 Children lets us manipulate the children prop.
 
@@ -79,18 +79,18 @@ Menu({children}){
 
 🗒️: React.cloneElement(element, props, ...children) : Create a  react element based on the element, but with different props and children
 
-(7) Why React.Children is not reliable option for passing props down in the tree?
+❓ Why React.Children is not reliable option for passing props down in the tree?
 
 Becuase with React.Children you can pass the props to the immediate child only; so it is fragile because if a component is just wrapped in a  
 div for styling purpose now that componnent is no longer receiving any props.
 
-(7) Context and State?
+❓ Context and State?
 
 Context: Context have the job of passing values down to the children or grand-children in the tree
 
 State: State is charge of updating the value and triggering re-renders inside of react
 
-(8) Compound component with dot syntax?
+❓ Compound component with dot syntax?
 ./Menu
   ↪️ Menu.js
   ↪️ MenuButton.js
@@ -116,7 +116,7 @@ State: State is charge of updating the value and triggering re-renders inside of
     <Menu.Dropdown></Menu.Dropdown>
   </Menu> 
   
-(9) Some points about useState?
+❓ Some points about useState?
 
 -> useState maintains variables across render cycles and triggers re-renders on change
 -> when you update value by set function the value is updated in the next render
@@ -125,9 +125,8 @@ State: State is charge of updating the value and triggering re-renders inside of
 Like in current state suppose a state variable changed and it trgigered a re-render then it will not casue re-render immediately 
 it will let all the event handlers run their set function and then trigger re-render
 
-(10) useRefs?
+❓ useRefs?
 
 useRefs maintains values across render cycles without causing re-renders 
 Refs are like state, except changing them doesn't cause a re-render.
 
-(11) 

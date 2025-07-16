@@ -1,4 +1,4 @@
-(Q) How can we use 'react-router-dom' for routing purpose?
+❓ How can we use 'react-router-dom' for routing purpose?
 
 <BrowserRouter> (The Manager) ➡️
 
@@ -14,7 +14,7 @@
 
     Iterates through its child <Route> components to find the first matching path.
 
-(2)What is a location object?
+❓ What is a location object?
 location object provides information about URL and also provides some APIs to manipulate it.
 
 ➡️ location.state: Used to pass info across pages
@@ -24,7 +24,7 @@ location object provides information about URL and also provides some APIs to ma
 ➡️ If you just add up the three you'll get the URL the user sees in the browser:
 location.pathname + location.search + location.hash; Eg: /bbq/pig-pickins?campaign=instagram#menu
 
-(3) How do you make sure header and footer stays consistently on each page?
+❓ How do you make sure header and footer stays consistently on each page?
 
 We can use <Outlet/> that renders element if it matches path of the location..
 Eg:
@@ -37,3 +37,22 @@ export default function Header(){
         </>
     )
 }
+
+❓ What is primary reason to use a nested route?
+
+Whenever we have some shared UI between routes in our app.
+
+❓ What is a "Layout Route"?
+
+It's the parent route of some nested routes that contains the portion of the 
+UI that will be shared, it will use <Outlet/> to render it's children that matches 
+the path.
+
+❓ What is an "index route"?
+
+It's the "default route" we want to render when the path of the parent route matches.
+Eg: <Route path="/" element={<Header/>}>
+        <Route index element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+    </Route> 
+
