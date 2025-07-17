@@ -193,3 +193,27 @@ Then on next page you can use useLocation hook
 const location = useLocation()
 const search = location.state?.search || ""
 
+
+----------------------🍄🍄🍄----------------------
+/*
+*
+PROTECTED ROUTE
+*
+*/
+
+❓ What happens if you define <Route element={<Auth/>}> without a path 
+
+if you define a <Route> without a path, but with an element, it works like a layout/wrapper component.
+This wrapper will always render when any child route (nested inside it) matches.
+
+❓ What component can we use to automatically send someone
+   to a different route in our app?
+
+<Navigate to="/login" />
+
+❓ What component can we render if the user IS logged in?
+
+<Outlet />
+
+
+
